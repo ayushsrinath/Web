@@ -1,6 +1,8 @@
 function initialize () {
 }
 
+
+//Method to perform AJAX request to query movie based on search keyword
 function sendRequest () {
    var xhr = new XMLHttpRequest();
    var query = encodeURI(document.getElementById("form-input").value);
@@ -16,6 +18,8 @@ function sendRequest () {
    xhr.send();
 }
 
+
+//Method to format search results
 function data_format(str){
 		dat = JSON.parse(str)
 		var tr = ""
@@ -31,7 +35,7 @@ function data_format(str){
 }
 
 
-
+//Method to get movie data based on id
 function movie_data(id){
 	var xhr = new XMLHttpRequest();
     xhr.open("GET", "proxy.php?method=/3/movie/" +id);
@@ -48,7 +52,7 @@ function movie_data(id){
 	
 }
 
-
+//Method to format movie details
 function details_format(details){
 	dat = JSON.parse(details)
 	var tr = ""
@@ -70,6 +74,7 @@ function details_format(details){
 }
 
 
+//Method to get cast of a movie
 function movie_cast(id){
 	var xhr = new XMLHttpRequest();
     xhr.open("GET", "proxy.php?method=/3/movie/" +id+"/credits");

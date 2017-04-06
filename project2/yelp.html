@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- Student Name:  Ayush V Srinath -->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display Best Restaurants on a Map</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="yelp.js"></script>
+  </head>
+  <body onload="initialize();">
+    <form>
+       <label>Search Terms: <input type="text" id="search"/></label>
+       <input type="button" onclick="sendRequest();" value="Find"/>
+    </form>
+    <div id="output">&nbsp;</div>
+	<div id = "map" style="width: 600px;height: 500px;"></div>
+  </body>
+  <script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzHFb8fjYinZQbZFlswCHqI5zL8OlBOBM&callback=initialize">
+</script>
+	
+</html>
